@@ -63,8 +63,10 @@ else {
 	$finalString = "const urls = [ '" + $finalString + "']; urls.forEach(url => {  window.open(url, '_blank'); });"
 	}
 
-Write-Host "Paste the following into the bottom right "Console" Window:'r"
+Write-Host "Paste the following into the bottom right "Console" Window:"
+Write-Host " "
 
 Write-Host $finalString
 
+Write-Host " "
 
