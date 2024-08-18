@@ -2,7 +2,7 @@
 # Block_Twitter_Followers_Or_Hashtag_VX.Y.ps1 - Block the followers of a Twitter user OR block all the Twitter
 # users that have a specific hashtag in their posts (I.e. using the Search box)
 #
-# Judo to the "Block button for X(Twitter)" extension that popped up the URL for blocking users. This extension
+# Kudo's to the "Block button for X(Twitter)" extension that popped up the URL for blocking users. This extension
 # gave me tips on how to script this out:
 # chrome://extensions/?id=mfoeckbmbmmifpgdlokmionbblpbcbfh
 # And to the idea from Twitter Blocker for writing a script:
