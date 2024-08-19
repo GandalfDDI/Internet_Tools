@@ -70,3 +70,6 @@ Write-Host $finalString
 
 Write-Host " "
 
+
+$input = Read-Host "Press Return To Continue"
+
