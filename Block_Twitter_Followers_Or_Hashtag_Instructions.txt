@@ -1,0 +1,62 @@
+A script to block all the followers for a specific user, a thread.
+
+I wrote this after hearing about users asking their followers to abuse Twitter users like @MuellerSheWrote, @medus4_cdc, and @AdamKinzinger. (1/16) 
+NOBODY should have to put up with abuse from a user and their followers but here we are ...
+
+I wrote this script to be as open / usable as possible. As a security practitioner I ALWAYS warn people not to blindly trust any scripts. (2/16) 
+I have commented the script so that you know what it is doing. I does NOT log into your Twitter account, just created a javascript to block those users that YOU paste in.
+
+The script:
+https://github.com/GandalfDDI/Internet_Tools/blob/main/Block_Twitter_Followers_Or_Hashtag_V1.0.ps1
+
+Kudo's to the "Block button for X(Twitter)" Chrome extension that popped up the URL for blocking users, this helped me as well as Twitter Blocker
+https://chromewebstore.google.com/detail/block-button-for-xtwitter/mfoeckbmbmmifpgdlokmionbblpbcbfh
+
+Twitter Blocker
+https://outsidetheasylum.blog/twitter-blocker/
+
+I suggest installing Block button for X(Twitter) for quick one click blocking, easier than running my script.
+
+Instructions:
+ALL OF THESE INSTRUCTIONS ARE USING Google Chrome browser. I could not get this to work on Edge.
+
+Download:
+https://github.com/GandalfDDI/Internet_Tools/blob/main/Block_Twitter_Followers_Or_Hashtag_V1.0.ps1
+
+and save.
+
+The first time you run a local PowerShell script you will have to open as an administrator and run the command "Set-ExecutionPolicy unrestricted".  Note that this allows someone to run ANY scripts on your machine so if you are nervous about that when you finish run the command "Set-ExecutionPolicy Restricted".
+
+Open a PowerShell window on a Windows machine and run the Block_Twitter_Followers_Or_Hashtag_V1.0.ps1 script.
+It will ask for the input which is the HTML for the users you want to block. This is the hard part.
+
+Go to the user, click on "Followers"
+Block_Twitter_Followers_Step_1.jpg
+
+RIGHT CLICK next to the list of followers and choose "Inspect"
+Block_Twitter_Followers_Step_2.jpg
+
+On the right hand side you will see "<div class"css" highlighted
+Block_Twitter_Followers_Step_3.jpg
+
+When you hover over that the followers will also highlight. Right click, choose copy --> copy element and copy that to the clipboard.
+Block_Twitter_Followers_Step_4.jpg
+
+Run the script
+Block_Twitter_Followers_Step_5.jpg
+
+And paste in (right click). You will be a warning about the buffer being more than 5k, choose "Paste Anyway".
+Block_Twitter_Followers_Step_6.jpg
+
+Hit the return key. When the text stops flowing, hit the return key, type in a . (just a single period) and hit the return again. You will see the output like:
+const urls = [ 'https://x.com/DebLynn1224?block=true%27,%27https://x.com/trumpfangirl20?block=true']; urls.forEach(url => {  http://window.open(url, '_blank'); });
+
+Open a new blank window in Chrome, Right Click and choose Inspect. At the bottom the FIRST time you try this you will have to type "allow pasting". Copy the text from the PowerShell window (highlight the text you want to copy and press the return key). Paste it into the JavaScript window at the bottom right. A BUNCH of "X" windows will pop up, they are blocking the users.
+
+If you do too many users then "X" will throttle you and you just have to wait a bot before you block more.
+
+Not all the users will be blocked, you may have to rinse & repeat for this to work completely.
+
+Scroll down the "Following" page until you see a new set of users that are not blocked yet & perform the above steps again.
+
+Feel free to contact me if you have any questions.
